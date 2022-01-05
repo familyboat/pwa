@@ -1,0 +1,20 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "progressive web app: calculator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish:no-pwa": "gh-pages -d ./no-pwa -e calculator/no-pwa",
+    "publish:pwa": "gh-pages -d ./pwa -e calculator/pwa"
+  },
+  "keywords": [
+    "pwa",
+    "calculator"
+  ],
+  "author": "familyboat",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
