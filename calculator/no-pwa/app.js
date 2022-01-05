@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
   const current = document.querySelector('#current > p');  
   const keyboard = document.querySelector('#keyboard');
 
-  let isOperator;
+  let isOperator = true;
 
   const getKeyboardValue = (element) => {
     while (element.tagName !== 'SPAN') {
@@ -35,6 +35,7 @@ window.addEventListener('load', () => {
       history.appendChild(li);
       li.scrollIntoView();
       current.textContent = '';
+      isOperator = true;
     }
   });
 });
