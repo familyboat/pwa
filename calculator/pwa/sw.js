@@ -1,4 +1,4 @@
-const cacheName = "calculatorPwa-v2";
+const cacheName = "calculatorPwa-v3";
 const appShellFiles = [
   "./",
   "./index.html",
