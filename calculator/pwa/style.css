@@ -1,5 +1,10 @@
-* {
+*, *::after, *::before {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+  font-family: serif;
 }
 
 html, body {
@@ -13,6 +18,7 @@ html, body {
   display: flex;
   height: 100%;
   max-width: 576px;
+  min-width: 224px;
   margin: auto;
   flex-direction: column;
 }
@@ -27,11 +33,10 @@ html, body {
   overflow-y: auto;
   line-break: anywhere;
 
-  font-family: Roboto;
-  font-size: 36px;
+  font-size: 3rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 42px;
+  line-height: 1.17;
   letter-spacing: 0em;
 }
 
@@ -39,16 +44,14 @@ html, body {
   background-color: hsla(101, 65%, 78%, 1);
 
   height: 15%;
-  min-height: 15%;
 
   overflow-y: auto;
   line-break: anywhere;
 
-  font-family: Roboto;
-  font-size: 36px;
+  font-size: 3rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 42px;
+  line-height: 1.17;
   letter-spacing: 0em;
   text-align: left;
 }
@@ -77,13 +80,12 @@ html, body {
 }
 
 #keyboard > button > span {
-  --border-width: 56px;
+  --border-width: 4.67rem;
 
-  font-family: Roboto;
-  font-size: 48px;
+  font-size: 4rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 56px;
+  line-height: 1.17;
   letter-spacing: 0em;
 
   width: var(--border-width);

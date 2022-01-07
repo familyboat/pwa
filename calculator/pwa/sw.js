@@ -1,4 +1,4 @@
-const cacheName = "calculatorPwa-v1";
+const cacheName = "calculatorPwa-v2";
 const appShellFiles = [
   "./",
   "./index.html",
@@ -18,7 +18,16 @@ self.addEventListener("install", (e) => {
   })());
 });
 
-
+// 清除旧版本的缓存
+self.addEventListener("activate", (e) => {
+  console.log("[service worker] activate");
+  e.waitUntil(caches.keys().then((keyList) => {
+    return Promise.all(keyList.map((key) => {
+      if (key === cacheName) return;
+      return caches.delete(key);
+    }));
+  }));
+});
 
 // 使用service worker获取内容
 self.addEventListener("fetch", (e) => {
